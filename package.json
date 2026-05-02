@@ -1,0 +1,20 @@
+{
+  "name": "ticocars2_graphql",
+  "version": "1.0.0",
+  "description": "GraphQL API for TicoCars2",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^5.5.0",
+    "dotenv": "^17.4.2",
+    "graphql": "^16.13.2",
+    "graphql-tag": "^2.12.6",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.1"
+  }
+}
