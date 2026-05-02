@@ -1,10 +1,10 @@
 {
   "name": "ticocars2_graphql",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000t\u0000i\u0000c\u0000o\u0000c\u0000a\u0000r\u0000s\u00002\u0000_\u0000g\u0000r\u0000a\u0000p\u0000h\u0000q\u0000l\u0000\r\u0000 \u0000",
-  "main": "index.js",
+  "description": "GraphQL API for TicoCars2",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,8 @@
     "@apollo/server": "^5.5.0",
     "dotenv": "^17.4.2",
     "graphql": "^16.13.2",
+    "graphql-tag": "^2.12.6",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.6.1"
   }
 }
