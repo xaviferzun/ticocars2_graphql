@@ -16,12 +16,19 @@ const resolvers = {
     //Get a vehicle by ID
     vehicle: async (_, { id }) => {return await Vehicle.findById(id).populate("owner");},
 
+    //KAN-74 Get vehicles of the authenticated user
+    myVehicles: async (_, __, {user}) => {
+      if (!user) throw new Error("No autenticado.");
+      return await Vehicle.find({owner: user._id}).sort({createdAt: -1});
+    },
+
     //Get the authenticated user from context
-    me: async (_, __, { user }) => {
+    me: async (_, __, {user}) => {
       if (!user) throw new Error("No autenticado.");
       return user;
     },
   },
 };
+
 
 module.exports = resolvers;

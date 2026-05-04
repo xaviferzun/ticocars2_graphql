@@ -26,6 +26,7 @@ const typeDefs = gql`
   type Query {
     vehicles(brand: String, model: String, status: String): [Vehicle]
     vehicle(id: ID!): Vehicle
+    myVehicles: [Vehicle]
     me: User
   }
 `;
