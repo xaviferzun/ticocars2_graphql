@@ -23,10 +23,27 @@ const typeDefs = gql`
     owner: User
   }
 
+  type Answer {
+    id: ID!
+    text: String!
+    user: User
+    createdAt: String
+  }
+
+  type Question {
+    id: ID!
+    text: String!
+    user: User
+    vehicle: Vehicle
+    answer: Answer
+    createdAt: String
+  }
+
   type Query {
     vehicles(brand: String, model: String, status: String): [Vehicle]
     vehicle(id: ID!): Vehicle
     myVehicles: [Vehicle]
+    inbox: [Question]
     me: User
   }
 `;
